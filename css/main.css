@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Very-dark-blue-one);
+    padding: 1.25em;
+}
+ul {
+    list-style: none;
+}
+:root {
+--Very-dark-blue-one: hsl(217, 54%, 11%);
+--Very-dark-blue-two: hsl(216, 50%, 16%);
+--Very-dark-blue-three: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+--Soft-blue: hsl(215, 51%, 70%)
+--Cyan: hsl(178, 100%, 50%)
+}
+.container {
+    background-color: var(--Very-dark-blue-two);
+    box-shadow:0 0 12px rgb(0 0 0 / 50%) ;
+    margin: 1rem;
+    height: calc(100vh- 1px);
+}
+
+.container .equilibrium img {
+    max-width: 100%;
+    position: relative;
+    display: block;
+}
+.container .equilibrium::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgb(1 255 247 / 40%);
+    border-radius: 10px;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+    transition: .5s;
+}
+.container .equilibrium:hover::before {
+opacity: 1;
+}
+.container .equilibrium .view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    height: 5vh;
+    opacity: 0;
+    transition: .5s;
+    z-index: 2;
+}
+.container .equilibrium:hover .view  {
+    opacity: 1;
+    }
+.container .titel {
+    margin : 1.25rem 0;
+    cursor: pointer;
+}
+.container .titel:hover {
+    color:hsl(178, 100%, 50%);
+}
+.container p:first-of-type {
+    color:hsl(215, 32%, 27%);
+    margin-bottom: 1.25rem;
+}
+.container ul li img {
+    width: 17px;
+    height: 17px;
+}
+.container ul li span {
+    color:hsl(215, 32%, 27%);
+    margin-left: 5px;
+}
+.container .earn span {
+    color:hsl(178, 100%, 50%);
+}
+.footer {
+    margin: 20px 0;
+}
+.footer .avatar {
+    max-width: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.footer div {
+    color:var(--Very-dark-blue-three);
+}
+.footer span:last-of-type a {
+    text-decoration: none;
+    color: var(--White);
+    margin-left: 5px;
+}
+.footer span:last-of-type:hover a {
+    color:hsl(178, 100%, 50%);
+}
+@media(min-width:375px) {
+    .container {
+        width: 300px;
+    }
+}
